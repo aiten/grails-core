@@ -58,7 +58,7 @@ public class GrailsWrapper {
         final String[] args2 = new String[args.length];
         System.arraycopy(args, 0, args2, 0, args.length);
         for(int i = 0; i < args2.length; i++) {
-            if("--conf".equals(args2[i]) && (i < (args2.length + 1))) {
+            if("--conf".equals(args2[i]) && (i < (args2.length - 1))) {
                 final File groovyStarterConf = new File(grailsHome, "conf/groovy-starter.conf");
                 args2[i + 1] = groovyStarterConf.getAbsolutePath();
                 break;
